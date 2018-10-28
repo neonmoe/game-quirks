@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Game Quirk Generator</title>
+  </head>
+  <body>
+    <h1>Game Quirk Generator</h1>
+    <p>Select quirk generation options, and press "Generate"!</p>
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td>
+            <label for="perspective">Perspective:</label>
+          </td>
+          <td>
+            <select id="perspective">
+              <option value="any" selected>Any</option>
+              <option value="perspectiveless">Perspectiveless</option>
+              <option value="sidescroller">Sidescroller</option>
+              <option value="isometric">Isometric</option>
+              <option value="first-person">First-person</option>
+              <option value="third-person">Third-person</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="mechanic">Mechanic:</label>
+          </td>
+          <td>
+            <select id="mechanic">
+              <option value="any" selected>Any</option>
+              <option value="puzzle">Puzzle</option>
+              <option value="platformer">Platformer</option>
+              <option value="shooter">Shooter</option>
+              <option value="strategy">Strategy</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="quirk-count">Quirks:</label>
+          </td>
+          <td>
+            <input type="number" id="quirk-count" value="3">
+          </td>
+      </tbody>
+    </table>
+    <br>
+    <button id="generate-btn">Generate</button>
+    <div id="result">
+      <div id="template">
+        <hr>
+        <h1>{{perspective}} {{mechanic}} {{quirks}}</h1>
+      </div>
+    </div>
+    <script src="generator.js" type="application/javascript"></script>
+  </body>
+</html>
